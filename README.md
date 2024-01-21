@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-at2d
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-at2d = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var at2d = require( 'path/to/vendor/umd/array-base-at2d/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.at2d;
-})();
-</script>
+var at2d = require( '@stdlib/array-base-at2d' );
 ```
 
 #### at2d( x, i0, i1 )
@@ -92,6 +84,12 @@ var out = at2d( x, 0, 1 );
 out = at2d( x, 1, 0 );
 // returns 3
 ```
+
+The function accepts the following arguments:
+
+-   **x**: two-dimensional nested input array.
+-   **i0**: first dimension index.
+-   **i1**: second dimension index.
 
 </section>
 
@@ -118,14 +116,9 @@ out = at2d( x, 1, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-papply@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var papply = require( '@stdlib/utils-papply' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filled2dBy = require( '@stdlib/array-base-filled2d-by' );
 var binary2d = require( '@stdlib/array-base-binary2d' );
 var zeros2d = require( '@stdlib/array-base-zeros2d' );
@@ -151,11 +144,6 @@ console.log( out );
 // Fill the output array with randomly selected values from the input array:
 binary2d( [ i0, i1, out ], shape, papply( at2d, x ) );
 console.log( out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
