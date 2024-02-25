@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-at2d/tags). For example,
+
+```javascript
 import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@v0.2.1-deno/mod.js';
 ```
 
@@ -106,7 +111,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import filled2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled2d-by@deno/mod.js';
 import binary2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-binary2d@deno/mod.js';
 import zeros2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@deno/mod.js';
-import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@v0.2.1-deno/mod.js';
+import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@deno/mod.js';
 
 var shape = [ 3, 3 ];
 
