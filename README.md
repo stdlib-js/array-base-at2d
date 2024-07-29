@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@deno/mod.js';
+import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@v0.2.2-deno/mod.js';
 ```
 
 #### at2d( x, i0, i1 )
@@ -106,7 +106,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import filled2dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled2d-by@deno/mod.js';
 import binary2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-binary2d@deno/mod.js';
 import zeros2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@deno/mod.js';
-import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@deno/mod.js';
+import at2d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@v0.2.2-deno/mod.js';
 
 var shape = [ 3, 3 ];
 
