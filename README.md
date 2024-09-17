@@ -45,43 +45,37 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-at2d
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-at2d = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var at2d = require( 'path/to/vendor/umd/array-base-at2d/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at2d@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.at2d;
-})();
-</script>
+var at2d = require( '@stdlib/array-base-at2d' );
 ```
 
 #### at2d( x, i0, i1 )
 
-Return an element from a two-dimensional nested array.
+Returns an element from a two-dimensional nested array.
 
 ```javascript
 var x = [ [ 1, 2 ], [ 3, 4 ] ];
@@ -124,14 +118,9 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-papply@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var papply = require( '@stdlib/utils-papply' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filled2dBy = require( '@stdlib/array-base-filled2d-by' );
 var binary2d = require( '@stdlib/array-base-binary2d' );
 var zeros2d = require( '@stdlib/array-base-zeros2d' );
@@ -157,11 +146,6 @@ console.log( out );
 // Fill the output array with randomly selected values from the input array:
 binary2d( [ i0, i1, out ], shape, papply( at2d, x ) );
 console.log( out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
