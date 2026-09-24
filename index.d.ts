@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2024 The Stdlib Authors.
@@ -16,16 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Array2D } from '@stdlib/types/array';
 
 /**
-* Return an element from a two-dimensional nested array.
+* Returns an element from a two-dimensional nested array.
 *
-* @module @stdlib/array-base-at2d
+* @param x - input array
+* @param i0 - first dimension index
+* @param i1 - second dimension index
+* @returns nested array element
 *
 * @example
-* var at2d = require( '@stdlib/array-base-at2d' );
-*
 * var x = [ [ 1, 2 ], [ 3, 4 ] ];
 *
 * var v = at2d( x, 0, 1 );
@@ -37,12 +42,9 @@
 * v = at2d( x, -2, -2 );
 * // returns 1
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function at2d<T = unknown>( x: Array2D<T>, i0: number, i1: number ): T | void;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = at2d;
